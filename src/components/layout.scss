@@ -1,0 +1,51 @@
+$headerbgcolor: dodgerblue;
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-size: 16px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+header {
+  background: $headerbgcolor;
+  margin-bottom: none;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  div {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 1.5rem 1rem;
+
+    h1 {
+      margin: 0
+    }
+  }
+}
+.menu {
+  background: '#f4f4f4';
+  padding-top: none;
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.main-container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1rem 1.5rem
+}
