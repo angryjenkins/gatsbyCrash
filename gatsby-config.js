@@ -5,6 +5,7 @@ module.exports = {
     author: `@mttmrtn`,
   },
   plugins: [
+    'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -36,7 +37,6 @@ module.exports = {
       }
     },
     'gatsby-transformer-remark',
-    'gatsby-plugin-sass'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
