@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Menu from "./menu"
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
         <footer>
           © {new Date().getFullYear()}, Built by
           {` `}
-          <Link to="https://www.angryjenkins.com">@angryjenkins</Link>
+          <a href="https://www.twitter.com/angryjenkins" target="_blank" rel="noopener noreferrer" className="footer_link">@angryjenkins</a>
         </footer>
       </div>
     </>
