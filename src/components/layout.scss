@@ -1,51 +1,79 @@
-$headerbgcolor: dodgerblue;
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&family=Lato:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'Stiff Staff';
+    src: url('../../public/fonts/Stiff_Staff/StiffStaff-Heavy.ttf'); /* IE9 Compat Modes */
+    src: url('../../public/fonts/Stiff_Staff/StiffStaff-Heavy.ttf?#iefix')
+            format('embedded-truetype'),
+        /* IE6-IE8 */ url('../../public/fonts/Stiff_Staff/StiffStaff-Heavy.ttf')
+            format('truetype'),
+        /* Super Modern Browsers */
+            url('../../public/fonts/Stiff_Staff/StiffStaff-Heavy.ttf')
+            format('truetype'),
+        /* Pretty Modern Browsers */
+            url('../../public/fonts/Stiff_Staff/StiffStaff-Heavy.ttf')
+            format('truetype'),
+        /* Safari, Android, iOS */
+            url('../../public/fonts/Stiff_Staff/StiffStaff-Heavy.ttf')
+            format('truetype'); /* Legacy iOS */
+}
+
+$primaryColor: #2c3e50;
+$secondaryColor: orange;
 
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 body {
-  font-size: 16px;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Erica One', cursive;
 }
 header {
-  background: $headerbgcolor;
-  margin-bottom: none;
+    background: $primaryColor;
+    margin-bottom: none;
 
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
-  div {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 1.5rem 1rem;
-
-    h1 {
-      margin: 0
+    a {
+        color: $secondaryColor;
+        text-decoration: none;
     }
-  }
+
+    div {
+        margin: 0 auto;
+        max-width: 960px;
+        padding: 1.5rem 1rem;
+
+        h1 {
+            margin: 0;
+            font-family: 'Stiff Staff', monospace;
+        }
+    }
 }
 .menu {
-  background: '#f4f4f4';
-  padding-top: none;
+    background: '#f4f4f4';
+    padding-top: none;
 
-  a {
-    text-decoration: none;
-  }
+    a {
+        text-decoration: none;
+    }
 
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-  }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
 .main-container {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1rem 1.5rem
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 1rem 1.5rem;
 }
