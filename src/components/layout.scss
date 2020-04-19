@@ -11,10 +11,20 @@
 
 $primaryColor: rgb(44, 62, 80);
 $secondaryColor: rgb(230, 126, 34);
-$textColor: rgb(100 , 99, 98);
+$textColor: rgb(100, 99, 98);
+$textAltColor: #f4f4f4;
 
 * {
-  transition: ease-in 0.3s;
+  transition: ease-in-out 0.3s;
+
+  &::selection {
+    background: $primaryColor; /* WebKit/Blink Browsers */
+    color: $textAltColor;
+  }
+  &::-moz-selection {
+    background: $primaryColor; /* Gecko Browsers */
+    color: $textAltColor;
+  }
 }
 
 html {
@@ -40,7 +50,7 @@ h2 {
     content: '';
     display: block;
     width: 72px;
-    border-bottom: 3px solid $secondaryColor;
+    border-bottom: 6px dotted $secondaryColor;
   }
 }
 
@@ -60,18 +70,36 @@ p {
 a {
   color: $primaryColor;
   text-decoration: none;
-  font-family: monospace;
   font-weight: 300;
 
   &:hover {
     color: dodgerblue;
-    border-bottom: 3px solid $secondaryColor;
+    border-bottom: 3px dotted $secondaryColor;
+    font-weight: 700;
+  }
+
+  &::selection {
+    background: $textAltColor; /* WebKit/Blink Browsers */
+    color: $primaryColor;
+  }
+  &::-moz-selection {
+    background: $textAltColor; /* Gecko Browsers */
+    color: $primaryColor;
   }
 }
 
 a.footer_link {
   color: $secondaryColor;
   font-family: 'Stiff Staff';
+
+  &:hover {
+    color: dodgerblue;
+  }
+}
+
+.angryjenkins {
+  font-family: 'Stiff Staff', cursive;
+  color: $secondaryColor;
 }
 
 header {
@@ -95,8 +123,12 @@ header {
       a,
       a:hover {
         color: $secondaryColor;
-        border-bottom: none;
         font-family: inherit;
+        font-weight: inherit;
+      }
+
+      a:hover {
+        border-bottom: 3px dotted $textAltColor;
       }
     }
   }
@@ -122,7 +154,6 @@ header {
 }
 
 #blog {
-
   .blog_preview {
     margin-bottom: 2rem;
   }
@@ -131,8 +162,9 @@ header {
 
     a {
       font-family: inherit;
-      &:hover{
+      &:hover {
         border-bottom: none;
+        font-weight: inherit;
       }
     }
   }
@@ -144,12 +176,13 @@ header {
   }
 
   span.blog_tag {
-    background-color: #f4f4f4;
+    background-color: $textAltColor;
     color: $textColor;
     border: 1px solid $textColor;
     border-radius: 3px;
     margin: 1px;
     padding: 2px;
+    font-size: 12px;
   }
 
   .small_link {
@@ -159,20 +192,63 @@ header {
 
 #blog_post_content {
   margin-bottom: 100px;
-  max-width: 75%;
-  display: block; 
+  max-width: 100%;
+  display: block;
   margin: 0 auto;
 
   .blog_body {
     margin-bottom: 50px;
   }
 
+  .blog_title {
+    text-align: center;
+    background-color: $primaryColor;
+    color: $textAltColor;
+    padding: 6px;
+    margin-bottom: 0;
+    width: 100%;
+
+    h1 {
+      color: $textAltColor;
+
+      &:after {
+        content: '';
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+        border-bottom: 6px dotted $secondaryColor;
+      }
+
+      &::selection {
+        background: $secondaryColor; /* WebKit/Blink Browsers */
+        color: $textColor;
+      }
+      &::-moz-selection {
+        background: $secondaryColor; /* Gecko Browsers */
+        color: $textColor;
+      }
+    }
+  }
+
+  .blog_subhead {
+    width: 100%;
+    background-color: $secondaryColor;
+    color: $textAltColor;
+    padding: 6px;
+  }
+
   .blog_tagline {
     text-align: center;
     font-size: 1.2rem;
+    background-color: transparent;
+    color: $textAltColor;
   }
 
-  .blog_date { text-align: center; font-weight: 300}
+  .blog_date {
+    text-align: center;
+    background-color: transparent;
+    color: $textAltColor;
+  }
 
   .small_link {
     font-size: 12px;

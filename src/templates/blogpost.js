@@ -10,14 +10,21 @@ export default function Template({ data }) {
     <Layout>
       <SEO title={post.frontmatter.title} />
       <div id="blog_post_content">
-        <h1>{post.frontmatter.title}</h1>
-        <p className='blog_tagline'>{post.frontmatter.tagline}</p>
-        <p className='blog_date'>{post.frontmatter.date}</p>
+        <div className="blog_title">
+          <h1>{post.frontmatter.title}</h1>
+        </div>
+        <div className="blog_subhead">
+          <p className="blog_tagline">{post.frontmatter.tagline}</p>
+          <p className="blog_date">
+            {post.frontmatter.author} &sdot; {post.frontmatter.date}
+          </p>
+        </div>
 
-        <div className="blog_body" dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
-        <em>by {post.frontmatter.author}</em><br />
-
+        <div
+          className="blog_body"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+        <hr />
         <small className="small_link">
           [<Link to="/blog">Back to the Blog</Link>]
         </small>
