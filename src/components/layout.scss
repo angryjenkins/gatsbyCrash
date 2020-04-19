@@ -9,9 +9,9 @@
       format('truetype');
 }
 
-$primaryColor: rgb(44, 62, 80);
+$primaryColor: rgb(101, 106, 110);
 $secondaryColor: rgb(230, 126, 34);
-$textColor: rgb(100, 99, 98);
+$textColor: rgb(70, 68, 66);
 $textAltColor: #f4f4f4;
 
 * {
@@ -44,7 +44,7 @@ body {
 h1,
 h2 {
   color: $primaryColor;
-  font-family: 'Erica One', cursive;
+  font-family: 'Stiff Staff', cursive;
 
   &:after {
     content: '';
@@ -90,7 +90,7 @@ a {
 
 a.footer_link {
   color: $secondaryColor;
-  font-family: 'Stiff Staff';
+  font-family: 'Stiff Staff', cursive;
 
   &:hover {
     color: dodgerblue;
@@ -128,13 +128,14 @@ header {
       }
 
       a:hover {
-        border-bottom: 3px dotted $textAltColor;
+        -webkit-text-stroke: 0.75px $textAltColor;
+        border-bottom: none;
+
       }
     }
   }
 }
 .menu {
-  background: '##ddd';
   padding-top: none;
 
   a {
